@@ -3,6 +3,8 @@ import { useState  } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Group3Image from '../assets/Group-3.svg';
 
+//import axios, { Axios } from 'axios';
+
 export default function Loginelement() {
   
  const [mail, setmail] = useState("");
@@ -17,6 +19,42 @@ export default function Loginelement() {
   const HandleLogin = () => {
     navigate('/dashboard' );
   };
+
+  /*
+
+const handleLogin = async () => {
+    try {
+      console.log('here at hqndlelogin')
+      const response = await axios.post('http://localhost:5003/doctors/login', {
+        email: mail,
+       password: psw
+      });
+  
+      const { token } = response.data;
+      console.log(response)
+
+  
+      // Assuming you want to store the token in localStorage
+      localStorage.setItem('token', token);
+      navigate('/dashboard' );
+      console.log("done")
+  
+      // You may also want to redirect the user to another page upon successful login
+      // history.push('/dashboard');
+    } catch (error) {
+      // Log the entire error object for debugging purposes
+      console.error('Login failed:', error);
+  
+      // Handle errors based on your server response
+      if (error.response && error.response.status === 403) {
+        console.error('Unauthorized:', error.response.data);
+      } else if (error.response && error.response.status === 404) {
+        console.error('Doctor not found:', error.response.data);
+      } else {
+        console.error('Login failed:', error.response ? error.response.data : 'Unknown Error');
+      }
+    }
+  }; */
 
   return (
     <div className='flex justify-center items-center min-h-screen font-[poppins]'>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Group3Image from '../assets/Group-3.svg';
+//import axios, { Axios } from 'axios';
 
 export default function Signupelement() {
     const [mail, setmail] = useState("");
@@ -17,6 +18,22 @@ export default function Signupelement() {
     const HandleLogin = () => {
       navigate('/dashboard' );
     };
+
+    /*
+    const HandleLogin = async () => {
+        await axios.post("http://localhost:5003/doctors/register",{
+            firstname:prenom,
+            lastname:nom,
+            specialty:spy,
+            email:mail,
+            password:psw,
+            phone_number:nb,
+            workplace:cpsw,
+        }).then(response=>{
+            console.log(response.data);
+        })
+        navigate('/dashboard' );
+    }; */
    
     return (
       <div className='flex justify-center items-center min-h-screen font-[poppins]'>

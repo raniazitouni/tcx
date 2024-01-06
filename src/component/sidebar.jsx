@@ -21,6 +21,10 @@ export default function Sidebar()  {
     navigate('/Listpatient' );
   };
 
+  const Handlediagnosis = () => {
+    navigate('/diagnosis' );
+  };
+
   return (
     <div className=" flex flex-col w-1/5 pt-10 border-r-2 border-gray-300  ">
         <button onClick={Handledashboard} >
@@ -42,7 +46,7 @@ export default function Sidebar()  {
         </div>
         </button>
         <button >
-          <div  className="mx-7 my-5 flex flex-row " >
+          <div  className="mx-7 my-5 flex flex-row " onClick={Handlediagnosis}>
              <img src={diagnostic} />
              <p className="mx-4">Auto diagnostic </p>
           </div>

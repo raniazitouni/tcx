@@ -5,7 +5,7 @@ import Addpatient from './pages/Addpatient';
 import Dashboard from './pages/dashboard';
 import Home from './pages/home';
 import Listpatient from './pages/Listpatient'
-
+import Diagnosis from './pages/diagnosis';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/Addpatient" element={<Addpatient/>} />
           <Route path="/Dashboard" element={<Dashboard/>} />
           <Route path="/Listpatient" element={<Listpatient/>} />
-
+          <Route path="/Diagnosis" element={<Diagnosis/>} />
           
           
           
