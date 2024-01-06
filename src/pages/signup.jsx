@@ -1,8 +1,11 @@
 
-
-
+import Signupelement from "../component/signupelement";
 export default function Signup() {
-  return (
-    <div>signup</div>
-  )
+ return(
+  <div>
+    <Signupelement/>
+   </div>
+ )
+ 
 }
+  
